@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1eb72e8ebd.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="navContainer">
+        <nav>
+            <img src="#" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./energy.html">Energy</a></li>
+                <li><a href="./lesson.html">Lesson</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Case Study</button>
+                        <div class="dropdownContent">
+                          <a href="./bc.html">BC</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="./activity.html">Activity</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()""></i>
+        </nav>
+    </div>
+
+    <!-- landing -->
+    <section id="home">
+        <div class="banner">
+            <div class="slider" style="--quantity: 8">
+                <div class="item" style="--position: 2"><img src="./bio.jpg" alt="Bio Energy"></div>
+                <div class="item" style="--position: 3"><img src="./wind.jpeg" alt="Wind Energy"></div>
+                <div class="item" style="--position: 4"><img src="./geo.jpg" alt="Geothermal Energy"></div>
+                <div class="item" style="--position: 5"><img src="./solar.jpg" alt="Solar Energy"></div>
+                <div class="item" style="--position: 6"><img src="./jpg" alt="Hydro Energy"></div>
+                <div class="item" style="--position: 7"><img src="./ocean.jpg" alt="Ocean Energy"></div>
+                <div class="item" style="--position: 8"><img src="./canada.jpg" alt="Canada"></div>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <h3>Learn About</h3>
+                    <h1>Sustainable Development <span>Goals</span></h1>
+                </div>
+                <div class="model">
+                    <img src="./woman.png" alt="Person Looking Up">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- main page -->
+    <main class="mainHome">
+        <div class="mainCard">
+            <h2>What are we doing?</h2>
+            <p>Sustainable Squad is a navigable website with information and activities, enabling high-school
+                students to learn about the seventh Sustainable Development Goal (SDG), “Creating Renewable
+                Energy for All on Earth”. The site features engaging and interactive text, images, and videos
+                to teach the use of available sustainable energies in Canada. Additionally, there is an
+                interactive activity in which students learn about an ongoing energy issue, and then create
+                a DIY project to create their own renewable energy device.
+            </p>
+        </div>
+
+        <div class="mainCard">
+            <h2>What is our goal?</h2>
+            <p>Our project is a self-guided website in which students can freely navigate and learn about
+                sustainable energy, along with learning relevant issues and solutions presented by
+                available data from NASA. There are multiple pages on the site where students can view the
+                different types of sustainable energies, their applications in Canada, and other fun
+                activities/resources to support their learning. Having an interactive website allows students
+                to learn at their own pace. We hope that students, no matter their age, learn the potential
+                of sustainable and renewable energy in Canada in a fun and interactive way through the website.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

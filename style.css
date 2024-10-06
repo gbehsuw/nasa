@@ -1,0 +1,536 @@
+/* import fonts */
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* lexend */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+/* standard tags */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #020202;
+}
+
+h1 {
+    font-size: 6em;
+    line-height: 1em;
+    color: #3af281;
+}
+
+h1 span {
+    -webkit-text-stroke: 3px #3af281;
+    color: transparent;
+}
+
+p {
+    font-family: 'Lexend', sans-serif;
+}
+
+
+
+li span, p span {
+    color: #3af281;
+    font-weight: 500;
+}
+
+/* nav bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul > li > a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: background 0.5s;
+    font-weight: 700;
+}
+
+nav ul > li > a:hover {
+    background: -webkit-linear-gradient(#d2fbeb, #3af281);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #3af281;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a::hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+.navContainer {
+    padding: 10px 5%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: inherit;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdownContent a {
+    color: #020202;
+    font-weight: 700;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownContent a:hover {
+    background: #d2fbeb;
+    color: #020202;
+}
+  
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #09a152;
+}
+
+/* ************************************** */
+/* home page */
+.banner {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 100px;
+    height: 125px;
+    top: 10%;
+    left: calc(50% - 50px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 45s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-15deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-15deg) rotateY(360deg);
+    }
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .content .title {
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content .model {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .content .model img {
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    object-fit: contain;
+}
+
+/* main page */
+main.mainHome {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+}
+
+.mainCard {
+    background-color: #303030;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.mainCard > h2 {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mainCard > p {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.mainCard::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #09a152;
+    transform: scaleX(0.01);
+    transform-origin: left;
+    transition: transform 0.25s;
+}
+
+.mainCard:hover::before {
+    transform: scaleX(1);
+}
+
+/* ************************************** */
+/* energy */
+.energyCardContainer {
+    padding: 50px 0;
+}
+
+.energyCardWrapper {
+    padding: 10px 5%;
+}
+
+.energyCardList {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.energyCard {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 800px;
+    box-shadow: 5px 5px 15px rgba (0,0,0,0.5);
+}
+
+.energyCard img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    object-fit: cover;
+}
+
+.energyTxt {
+    background: linear-gradient(transparent, var(--colour));
+    height: 0;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+} 
+
+.energyTxt h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.energyTxt a {
+    margin-top: 10px;
+    color: #020202;
+    text-decoration: none;
+    font-size: 14px;
+    background: aliceblue;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.energyCard:hover img {
+    transform: scale(1.2);
+}
+
+.energyCard:hover .energyTxt {
+    height: 100%;
+}
+
+/* map */
+/* Basic colour */
+.zz, .NFLD, .NS, .PEI, .NB, .QUE, .ONT, .MAN, .SASK, .ALTA, .BC, .YK, .NWT, .NU
+{
+   fill:  #d2fbeb; 
+}
+
+path:hover {
+    fill: #3af281;
+    transition: 0.6s;
+    transform: translateY(-10px);
+
+}
+
+section.energyDivider {
+    text-align: center;
+    background: #09a152;
+    padding: 20px;
+}
+
+section.energyDivider h2 {
+    font-size: 5rem;
+}
+
+/* bee */
+#container3D {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* ************************************** */
+/* lesson */
+main.mainLesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.lessonDivider {
+    text-align: center;
+    background: #09a152;
+    padding: 20px;
+    width: 100%;
+}
+
+section.lessonDivider h2 {
+    font-size: 5rem;
+}
+
+/* lesson info + img */
+section.lessonInfoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 30px;
+    width: 100%;
+}
+
+.lessonImg {
+    margin: 15px;
+}
+
+.lessonImg img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    object-position: 0 10%;
+}
+
+.lessonInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+}
+
+.lessonInfo h2.lessonTxt {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #3af281;
+}
+
+.lessonInfo h3.lessonTxt {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.lessonInfo h3.lessonTxt span {
+    color: #3af281;
+}
+
+.lessonInfo ul li {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* lesson info cards */
+section.lessonInfoList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+section.lessonInfoList .lessonCard {
+    background: #303030;
+    padding: 40px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+section.lessonInfoList div:hover {
+    background-color: #09a152;
+    transform: translateY(-10px);
+}
+
+section.lessonInfoList h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* ************************************** */
+/* media queries */
+@media only screen and (max-width: 800px) {
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #2acb68;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .dropbtn {
+        padding: 0;
+    }
+    
+    .dropdown:hover .dropbtn {
+        background-color: inherit;
+    }
+
+    .banner  {
+        padding-bottom: 10px
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .banner .content .title h1 {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .banner .content .title h1 {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1eb72e8ebd.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="navContainer">
+        <nav>
+            <img src="#" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./energy.html">Energy</a></li>
+                <li><a href="./lesson.html">Lesson</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Case Study</button>
+                        <div class="dropdownContent">
+                          <a href="./bc.html">BC</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="./activity.html">Activity</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()""></i>
+        </nav>
+    </div>
+
+    <!-- main -->
+    <main class="mainLesson">
+        <!-- divider -->
+        <section class="lessonDivider">
+            <h2>Making a Paper Windmill</h2>
+        </section>
+
+        <!-- smap intro -->
+        <section class="lessonInfoList">
+            <div class="lessonCard">
+                <h2>Purpose</h2>
+                <p>
+                    Our goal is to create a simple version of a windmill in real life!
+                </p>
+                <br>
+                <p>
+                    Like a real windmill the stronger and clearer the wind blowing on the windmill is, the more it’ll spin! Just like the potential of wind energy in real life, locations where there is open space allow for a higher potential of clear and strong wind energy without structures blocking the wind. Once finished, try putting the windmill outside your house instead of inside, this is similar to how putting wind turbines offshore allows for more clear wind to power the turbines.
+                </p>
+            </div>
+            <div class="lessonCard">
+                <h2>Materials</h2>
+                <h3>
+                    To make this you will need:
+                </h3>
+                <ul>
+                    <li>
+                        Paper (Preferably square and about 15cm x 15cm)
+                    </li>
+                    <li>
+                        Scrissors
+                    </li>
+                    <li>
+                        Starw/Pencil (w/ eraser)/Skewer
+                    </li>
+                    <li>
+                        Thumbtack/Push Pin
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lessonInfoList">
+            <div class="lessonCard">
+                <h2>1. Prepare the Paper</h2>
+                <p>
+                    Start with a <span>square piece of paper</span>. If you don’t have a square, you can cut a regular piece of paper into a square by folding one corner diagonally and cutting off the excess.
+                </p>
+            </div>
+            <div class="lessonCard">
+                <h2>2. Draw Lines</h2>
+                <p>
+                    Use a ruler to draw two diagonal lines from <span>corner to corner</span>, crossing at the center of the square. You should now have an "X" shape on the paper.
+                </p>
+            </div>
+            <div class="lessonCard">
+                <h2>3. Cut Along the Lines</h2>
+                <p>
+                    <span>Cut along the lines</span> you drew, <span>stopping</span> about 1 inch from the center (don't cut all the way to the center, just leave a small space).
+                </p>
+            </div>
+            <div class="lessonCard">
+                <h2>4. Fold the Corners</h2>
+                <p>
+                    Take <span>every other corner</span> of the paper and gently fold it toward the center of the square. You’ll be folding four of the corners in total.
+                </p>
+            </div>
+            <div class="lessonCard">
+                <h2>5. Secure the Windmill</h2>
+                <p>
+                    Push a push pin or thumbtack through the four folded corners and the center of the paper. Then, press the pin into the eraser of a pencil or use a straw or skewer for the base, making sure the windmill can spin freely.
+                </p>
+            </div>
+        </section>
+
+        <section class="lessonInfoContainer" id="geothermalEnergy">
+            <div class="lessonInfo">
+                <h2 class="lessonTxt">Geothermal Energy</h2>
+                <h3 class="lessonTxt">Energy Harnessed from <span>Underground Gases</span></h3>
+                <p>
+
+                </p>
+            </div>
+            <div class="lessonImg">
+                <img src="./canada.jpg" alt="">
+            </div>
+        </section>
+        <section class="lessonInfoContainer" id="solarEnergy">
+            <div class="lessonImg">
+                <img src="./canada.jpg" alt="">
+            </div>
+            <div class="lessonInfo">
+                <h2 class="lessonTxt">Solar Energy</h2>
+                <h3 class="lessonTxt">Energy harnessed from the <span>Sun</span></h3>
+                <p>
+
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

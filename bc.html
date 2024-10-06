@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC Case Study</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1eb72e8ebd.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="navContainer">
+        <nav>
+            <img src="#" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./energy.html">Energy</a></li>
+                <li><a href="./lesson.html">Lesson</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Case Study</button>
+                        <div class="dropdownContent">
+                          <a href="./bc.html">BC</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="./activity.html">Activity</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()""></i>
+        </nav>
+    </div>
+
+    <!-- main -->
+    <main class="mainLesson">
+        <!-- divider -->
+        <section class="lessonDivider">
+            <h2>Energy in British Columbia</h2>
+        </section>
+
+        <!-- smap intro -->
+        <section class="lessonInfoList">
+            <div class="lessonCard">
+                <h2>What is SMAP?</h2>
+                <p>
+                    SMAP is an orbiting observatory launched by NASA that measures the amount of water in soil across the Earth. Using this data, we can track floods and doughnuts in certain parts of the world. Since British Columbia is susceptible to forest fires due to droughts, we can use SMAP to confirm this.
+                </p>
+            </div>
+            <div class="lessonCard">
+                <h2>Why are we using it?</h2>
+                <p>
+                    By using the information provided by SMAP, we can analyze British Columbia’s dry soil moisture patterns throughout history, confirming that BC’s soil is drying out over time. With this information, we would know that droughts in BC are caused by climate change, and by using sustainable energies, we can decrease the rate of climate and dangerous occurrences, like wildfires.
+                </p>
+            </div>
+        </section>
+
+        <section class="lessonInfoList">
+            <div class="lessonCard">
+                <h2>Terminology</h2>
+                <ul>
+                    <li>
+                        <span>Soil Moisture Active Passive (SMAP)</span> is an orbiting observatory launched by NASA designed to measure and monitor soil moisture across the Earth. 
+                    </li>
+                    <li>
+                        <span>SMAP</span> is measured in cubic meters of water per cubic meters of soil (m³/m³)
+                    </li>
+                    <li>
+                        <span>Root zone soil moisture</span> refers to moisture found in the top 100 centimeters (1 meter) of soil.
+                    </li>
+                    <li>
+                    <span>9 km EASE-Grid 2.0</span> refers to the grid system used to organize the data. EASE-Grid is a way to represent geographic data, and the “9 km” is the scale of each grid cell, which means that each grid cell covers an area of 9 kilometers on each side.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lessonInfoContainer" id="geothermalEnergy">
+            <div class="lessonInfo">
+                <h2 class="lessonTxt">Geothermal Energy</h2>
+                <h3 class="lessonTxt">Energy Harnessed from <span>Underground Gases</span></h3>
+                <p>
+
+                </p>
+            </div>
+            <div class="lessonImg">
+                <img src="./canada.jpg" alt="">
+            </div>
+        </section>
+        <section class="lessonInfoContainer" id="solarEnergy">
+            <div class="lessonImg">
+                <img src="./canada.jpg" alt="">
+            </div>
+            <div class="lessonInfo">
+                <h2 class="lessonTxt">Solar Energy</h2>
+                <h3 class="lessonTxt">Energy harnessed from the <span>Sun</span></h3>
+                <p>
+
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Energy in Canada</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1eb72e8ebd.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+          }
+        }
+      </script>
+    <script src="./script.js" defer></script>
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="navContainer">
+        <nav>
+            <img src="#" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./energy.html">Energy</a></li>
+                <li><a href="./lesson.html">Lesson</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Case Study</button>
+                        <div class="dropdownContent">
+                          <a href="./bc.html">BC</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="./activity.html">Activity</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()""></i>
+        </nav>
+    </div>
+
+    <main class="mainEnergy">
+        <!-- divider -->
+        <section class="lessonDivider">
+            <h2>Types of Sustainable Energy</h2>
+        </section>
+
+        <!-- cards -->
+        <div class="energyCardContainer">
+            <div class="energyCardWrapper">
+                <div class="energyCardList">
+                    <div class="energyCard" id="geo">
+                        <img src="./geo.jpg" alt="Geothermal Energy">
+                        <div class="energyTxt" style="--colour: #e93636">
+                            <h3>Geothermal</h3>
+                            <a href="./lesson.html#geoThermal">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="energyCard" id="solar">
+                        <img src="./solar.jpg" alt="Solar Panels">
+                        <div class="energyTxt" style="--colour: #f1f16b">
+                            <h3>Solar</h3>
+                            <a href="./lesson.html#solarEnergy">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="energyCard" id="bio">
+                        <img src="./bio.jpg" alt="Bio Reactor">
+                        <div class="energyTxt" style="--colour: #3af281">
+                            <h3>Bio</h3>
+                            <a href="./lesson.html#bioEnergy">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="energyCard" id="hydro">
+                        <img src="./hydro.jpg" alt="Hydro Energy">
+                        <div class="energyTxt" style="--colour: #23cdeb">
+                            <h3>Hydro</h3>
+                            <a href="./lesson.html#hydroEnergy">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="energyCard" id="ocean">
+                        <img src="./ocean.jpg" alt="Ocean Energy">
+                        <div class="energyTxt" style="--colour: #7b6be5">
+                            <h3>Ocean</h3>
+                            <a href="./lesson.html#oceanEnergy">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="energyCard" id="wind">
+                        <img src="./wind.jpeg" alt="Wind Turbines">
+                        <div class="energyTxt" style="--colour: #99b4b7">
+                            <h3>Wind</h3>
+                            <a href="./lesson.html#windEnergy">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="container3D"></div>
+</body>
+</html>
