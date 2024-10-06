@@ -353,8 +353,12 @@ main.mainHome {
    fill:  #d2fbeb; 
 }
 
-path:hover {
+.BC {
     fill: #3af281;
+}
+
+path:hover {
+    fill: #2acb68;
     transition: 0.6s;
     transform: translateY(-10px);
 
@@ -472,6 +476,18 @@ section.lessonInfoList div:hover {
 section.lessonInfoList h2 {
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+/* captions */
+figcaption {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+    text-align: center;
+    font-style: italic;
+}
+
+figure {
+    height: 100%;
 }
 
 /* ************************************** */
